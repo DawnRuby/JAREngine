@@ -1,0 +1,30 @@
+[package]
+name = "JAREngine"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+#Used as a Rust Replacement for GLM
+cgmath = "0.18"
+
+
+
+#Used for logging purposes
+pretty_env_logger = "0.5"
+thiserror = "1"
+log = "0.4"
+
+#Error Handling
+anyhow = "1" #Used for Error Handling
+
+#Used to load 3D Models
+tobj = { version = "3", features = ["log"] }
+
+#Used to handle Texture loading
+png = "0.17"
+
+#Used to call the Vulkan API. You need to install the Vulkan SDK to use this (see here: https://vulkan.lunarg.com)
+vulkanalia = { version = "=0.28.0", features = ["libloading", "provisional", "window"] }
+
+#Used to create a window to render to
+winit = "0.29"
